@@ -1,0 +1,33 @@
+package ar.edu.unlp.info.oo2.Ejercicio_1;
+
+import java.util.ArrayList;
+import ar.edu.unlp.info.oo2.Ejercicio_1.Tweet;
+
+public class User {
+	ArrayList <Tweet> tws;
+	String screenName;
+	
+	public User(String screenName) {
+		this.tws = new ArrayList<Tweet>();
+		this.screenName = screenName;
+	}
+	
+	public void publicTweet(String tweet) {
+		Tweet tw = new Tweet(tweet);
+		this.tws.add(tw);
+	}
+	
+	public ArrayList<Tweet> getTws(){
+		return this.tws;
+	}
+	
+	public String getScreenName() {
+		return screenName;
+	}
+	public void setScreenName(String screenName) {
+		this.screenName = screenName;
+	}
+	
+	
+	
+}
