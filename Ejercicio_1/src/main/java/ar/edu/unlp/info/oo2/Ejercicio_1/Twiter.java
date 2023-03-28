@@ -26,6 +26,21 @@ public class Twiter {
 		}
 	}
 	
+	public User getLastAddUser() {
+		return users.get(users.size()-1);
+	}
+	
+	public Boolean deleteUser(String screenName) {
+		for(User u: users) {
+			if(u.getScreenName() == screenName) {
+				u.deleteTweets();
+				users.remove(u);
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	
 	
 	

@@ -30,6 +30,10 @@ public class User {
 		this.tws = null;
 	}
 	
+	public Tweet getLastTweet() {
+		return tws.get(tws.size()-1);
+	}
+	
 	public ArrayList<Tweet> getTws(){
 		return this.tws;
 	}
